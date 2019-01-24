@@ -104,7 +104,9 @@ On the Views directory make a lobby_views.py file
      ```
  - POST chat_messages to lobby
      ``` lobby_route.route('',methods=['POST']) 
-        def post_chat_messages(chat):
+        def post_chat_messages():
+         data = request.get_json()
+         chat = data.get('chat')
          LOBBY.add_chat_to_lobby(chat)
          return make_response(jsonify({
             "status": 201,
