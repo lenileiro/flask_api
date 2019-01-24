@@ -90,7 +90,7 @@ On the Views directory make a lobby_views.py file
 - model/lobby_views.py
  - import lobby_models into lobby_view
     ```from ..models import lobby_models 
-        LOBBY = lobby_models.RegisterModel()
+        LOBBY = lobby_models.LobbyModel()
     ```
  - make blueprint route
     ```lobby_route = Blueprint('lobby', __name__,url_prefix='/api/v1/lobby') ```
